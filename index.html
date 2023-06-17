@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My ዕቁብ</title>
+     <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+     <script src="Script.js">
+     </script>
+
+     <div class="container whole-container">
+          <div class="container header-main">
+               <header>
+                    <h1>My ዕቁብ</h1>
+               </header>
+          </div>
+          <div class="row p-4 container">
+               <div class="col">
+                    <div class="container form-container">
+                         <div class="form">
+                              <label for="name">Name: </label>
+                              <input type="text" name="name" id="name" required>
+                              <label for="amount">Amount: </label>
+                              <select id="amount">
+                                   <option value="500">500</option>
+                                   <option value="1000">1000</option>
+                                   <option value="5000">5000</option>
+                                   <option value="10000">10,000</option>
+                              </select>
+                              <label for="phone">Phone Number: </label>
+                              <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+                              <button onclick="addRow()">Register</button>
+                         </div>
+
+                         <h1>Rules</h1>
+                         <p>
+                         <ol>
+                              <li>Fill the input boxes with the right information.</li>
+                              <li>Fill in your name and Father's name.</li>
+                              <li>Choose from the option the amount you are going to place.</li>
+                              <li>Add your phone number on the phone field.</li>
+                              <li>Check what you filled in.</li>
+                              <li>Then Click Register</li>
+                         </ol>
+                         </p>
+
+                         <!-- Display error messages -->
+                         <p id="error"></p>
+
+                    </div>
+               </div>
+
+               <!-- Display the list of participants in a table -->
+               <div class="col">
+                    <div class="container table-container">
+                         <table id="myTable">
+                              <thead>
+                                   <td>Name</td>
+                                   <td>Amount</td>
+                                   <td>Phone</td>
+                              </thead>
+                              <!-- Table body will be populated with JavaScript -->
+                         </table>
+
+                         <!-- Button to pick a winner -->
+                         <button onclick="pickWinner()">Pick Winner</button>
+
+                         <!-- Display the winner -->
+                         <p id="winner"></p>
+
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+
+        
+
+</body>
+
+</html>
